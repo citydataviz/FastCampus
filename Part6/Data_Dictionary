@@ -1,0 +1,17 @@
+데이터 사전 
+
+● GREScore:GRE점수
+
+● TOEFLScore:토플점수
+
+● University Rating : 대학 레벨
+
+● SOP(statementofpurpose):자기소개서점수
+
+● LOR(letterofrecommendationstrength):추천서점수
+
+● Undergraduate GPA : 학부 성적
+
+● Research Experience : 연구 경험
+
+● Chance of Admit : 합격률(종속변수)
