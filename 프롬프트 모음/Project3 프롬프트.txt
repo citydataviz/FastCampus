@@ -1,0 +1,61 @@
+[ 데이터 사전 이해]
+Index: Row index
+user id: User ID (unique)
+test group: If "ad" the person saw the advertisement, if "psa" they only saw the public service announcement
+converted: If a person bought the product then True, else is False
+total ads: Amount of ads seen by person
+most ads day: Day that the person saw the biggest amount of ads
+most ads hour: Hour of day that the person saw the biggest amount of ads
+
+데이터에 대해서 간략하게 설명해줘
+
+[데이터 정제]
+user_id	test_group	converted	most_ads_day
+0	1069124	ad	False	Monday
+1	1119715	ad	False	Tuesday
+2	1144181	ad	False	Tuesday
+3	1435133	ad	False	Tuesday
+4	1015700	ad	False	Friday
+
+내가 보유한 데이터고, df 변수로 저장해뒀다. converted 컬럼을 False는 0, True는 1로 변경하는 파이썬 코드를 작성해줘
+
+[가설검정 ]
+user_id	test_group	converted	most_ads_day
+0	1069124	ad	0	Monday
+1	1119715	ad	0	Tuesday
+2	1144181	ad	0	Tuesday
+3	1435133	ad	0	Tuesday
+4	1015700	ad	0	Friday
+
+ 위 데이터셋을 df 변수로 저장하고,  "광고 효과가 있는가?"라는 가설검정 을 하려고한다.
+test_group컬럼을 기준으로 control(공익 광고 = psa) 과 test(실제 광고 = ad) 그룹을 구분하고, two sample t-test 활용하는 코드를 작성해줘
+
+[출력 방식 변경]
+소수점 3째자리까지 나오고, e-18 같은 것 말고 숫자 그대로 표현되게 수정해줘
+
+[결과 해석 요청]
+Two-Sample T-Test Results:
+T-Statistic: -8.657
+P-Value: 0.000
+
+결과해석해줘
+
+[정규성 검정]
+해당 df_new 데이터프레임에서 요일별로 그룹을 만들고 해당 converted 컬럼에 대해 정규성 검정을 하는 코드를 작성해줘
+
+[등분산성 검정]
+다음은 등분산성 테스트를 하는 코드를 작성해줘
+
+[Kruskal-Wallis 검정]
+정규성과 등분산성을 만족하지 않기 때문에 Kruskal-Wallis 검정을 하려고 한다. 해당 코드를 작성해줘
+
+[Kruskal-Wallis 검정 해석]
+Kruskal-Wallis H-test Results:
+Test Statistic: 412.794
+P-Value: 0.000
+요일별로 중앙값에 유의미한 차이가 있습니다
+
+이런 결과가 나왔는데, 추가 분석으로 어떤 요일이 유의미한 차이가 있는지 구체적으로 알기 위해서 필요한 코드를 작성해줘
+
+[광고효과 시각화]
+주어진 df_new 데이터셋에서 converted 컬럼을 활용해서 요일별 평균을 내고 각 요일의 x축으로 만들어서 막대그래프를 작성하는 코드를 보여줘

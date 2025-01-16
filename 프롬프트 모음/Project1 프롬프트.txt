@@ -1,0 +1,46 @@
+[열 이름 변경]
+
+Overall rank	Country or region	Score	GDP per capita	Social support	Healthy life expectancy	Freedom to make life choices	Generosity	Perceptions of corruption
+0	1	Finland	7.769	1.340	1.587	0.986	0.596	0.153	0.393
+1	2	Denmark	7.600	1.383	1.573	0.996	0.592	0.252	0.410
+2	3	Norway	7.554	1.488	1.582	1.028	0.603	0.271	0.341
+3	4	Iceland	7.494	1.380	1.624	1.026	0.591	0.354	0.118
+4	5	Netherlands	7.488	1.396	1.522	0.999	0.557	0.322	0.298
+
+위 데이터가 내가 보유한 데이터프레임이고, Pandas로 작업하고 있다. 컬럼이름들을 공백없이 간단한 한 단어로 수정하는 코드를 작성해줘
+
+
+[중복 행 확인]
+중복 행을 확인하는 코드를 작성해줘
+
+[결측치 확인]
+결측치 데이터를 확인하는 코드를 작성해줘
+
+[이상치 확인]
+이상치 데이터를 확인하는 코드를 작성해줘
+
+[히스토그램 시각화]
+score의 히스토그램을 그리는 코드를 작성해줘
+
+[다양한 차트를 모아서 시각화]
+score열을 y축으로 두고, gdp, social, life, freedom, generosity, corruption 6가지 열을 각각 x축으로 두고 산점도를 2*3 배열로 작성해줘
+
+[EDA]
+위 데이터프레임 이름을 df라고 지정하고 ydataprofiling 코드를 작성해줘
+
+[지도 시각화]
+Overall rank	Country or region	Score	GDP per capita	Social support	Healthy life expectancy	Freedom to make life choices	Generosity	Perceptions of corruption
+0	1	Finland	7.769	1.340	1.587	0.986	0.596	0.153	0.393
+1	2	Denmark	7.600	1.383	1.573	0.996	0.592	0.252	0.410
+2	3	Norway	7.554	1.488	1.582	1.028	0.603	0.271	0.341
+3	4	Iceland	7.494	1.380	1.624	1.026	0.591	0.354	0.118
+4	5	Netherlands	7.488	1.396	1.522	0.999	0.557	0.322	0.298
+
+지도에 나라별로 score컬럼을 표현하려고 하는데, df 데이터프레임을 활용할 때 어떤 라이브러리를 사용해야 적절하게 표현할 수 있을까
+
+[지도 색깔]
+어떤 색상이 이 지도에 행복도를 표현할 때 어울릴까 2가지만 추천해줘
+
+
+[상관관계 시각화]
+주어진 데이터에서 상관관계 히트맵을 그리려고 하는데, 수치형만 나타나는 컬럼을 정해서 한국말로 컬럼이름을 변경해주고, 관련된 코드를 작성해줘
